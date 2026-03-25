@@ -246,6 +246,7 @@ app.post('/whatsapp', async (req, res) => {
 
   const from = req.body.From;
   const body = (req.body.Body || '').trim();
+  console.log(`📨 Message from ${from}: "${body}"`);
   const numMedia = parseInt(req.body.NumMedia || '0', 10);
   const mediaContentType = req.body.MediaContentType0 || '';
   const mediaUrl = req.body.MediaUrl0 || '';
